@@ -5,8 +5,7 @@ if(config.group_id < 1){
 	vk = new VK({
 		token: config.token
 	})
-};
-if(config.group_id > 1){
+}else{
 	vk = new VK({
 		token: config.token,
 		pollingGroupId: config.group_id
@@ -17,7 +16,7 @@ if(config.time < 1 || isNaN(config.time))return console.error('параметр 
 if(config.group_id > 1){
 	vk.api.messages.editChat({
 		title: random(1, 2147483647),
-    	chat_id: config.chat_id	
+    		chat_id: config.chat_id	
 	}).catch(function(){
 		return console.error('хуйня.')
 	}).then(function(){

@@ -12,7 +12,7 @@ let vk = new VK(group_id < 1 ? {
 } : {
 	token: token,
 	pollingGroupId: group_id
-})
+});
 
 
 if(amount < 1 || isNaN(amount))return console.error('параметр "amount" некорректен.');
